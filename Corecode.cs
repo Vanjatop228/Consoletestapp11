@@ -1,14 +1,23 @@
-int[] cars = {100000}
-Console.WriteLine(cars)
-cars[0] = 14;
-cars[1] = 4;
-cars[2] = 9;
-cars[3] = 7;
-cars[4] = 0
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-Random.rand = Random();
-for (i=0, i <= cars, i++)
+namespace ConsoleApp12
 {
-cars[i] = rand.Next(0, 100000000)
-Console.WriteLine(cars[i])
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            long[] cars = new long[100000000];
+            Random rand = new Random();
+            for (long i = 0; i < cars.Length; i++) 
+            {
+                cars[i] = rand.Next(0, 1000000000);
+                Console.WriteLine(cars[i]);
+            }
+        }
+    }
 }
+
